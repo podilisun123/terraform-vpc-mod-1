@@ -67,6 +67,19 @@ resource "aws_subnet" "database" {
     }
   )
 }
+### database subnet group
+resource "aws_db_subnet_group" "default" {
+  name       = local.resource_name
+  subnet_ids = aws_subnet.database[*].id
+
+  tags = merge(
+    var.common_tags,
+    var.database_subnet_group_tags,
+    {
+      Name = local.resource_name
+    }
+  )
+}
 ### elastic ip
 resource "aws_eip" "eip" {
   domain   = "vpc"

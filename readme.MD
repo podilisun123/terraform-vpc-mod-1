@@ -17,4 +17,20 @@ project_name(required): type is string and you should submit the value
 environment(required): type is string and you should submit the value
 common_tags(required): type is map and you should submit the value
 vpc_cidr(optional): type is map and default value is 10.0.0.0/16
-
+enable_dns_hostnames(optional): type is boolean and default value is true
+vpc_tags(optional): type is map and default value is empty
+igw_tags(optional): type is map and default value is empty
+public_subnet_cidrs(required): type is list and you should submit the 2 valid public subnet cidrs
+private_subnet_cidrs(required): type is list and you should submit the 2 valid private subnet cidrs
+database_subnet_cidrs(required): type is list and you should submit the 2 valid database subnet cidrs
+public_subnet_tags(optional): type is map and default value is empty
+private_subnet_tags(optional): type is map and default value is empty
+database_subnet_tags(optional): type is map and default value is empty
+database_subnet_group_tags(optional): type is map and default value is empty
+nat_gateway_tags(optional): type is map and default value is empty
+public_route_table_tags(optional): type is map and default value is empty
+private_route_table_tags(optional): type is map and default value is empty
+database_route_table_tags(optional): type is map and default value is empty
+is_peering_need(optional): type is boolean and default value is false
+acceptor_vpc(optional): type is string and default value is empty
+peering_tags(optional): type is map and default value is empty

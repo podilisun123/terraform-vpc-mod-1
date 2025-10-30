@@ -64,6 +64,11 @@ variable "database_subnet_cidrs" {
   }
   
 }
+### database subnet group variables
+variable "database_subnet_group_tags" {
+  type = map
+  default = {}
+}
 variable "database_subnet_tags" {
   type = map
   default = {}
